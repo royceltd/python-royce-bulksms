@@ -1,8 +1,8 @@
 import requests
 
 def sendSMS(phone_number,message,sender_id,api_key):
-    # 74|r816nf9OSVy5qwQ3unPKel0i7SIflSFNMFk2TDKz
-    endpoint = "https://bulksms.roycetechnologies.co.ke/api/sendmessage"
+    
+    endpoint = "https://roycebulksms.com/api/sendmessage"
     data ={
     'sender_id': sender_id, 'text_message': message, 'phone_number': phone_number
     }
@@ -16,7 +16,7 @@ def sendSMS(phone_number,message,sender_id,api_key):
     return response.json()
 
 def deliveryReport(message_id,api_key):
-    endpoint = "https://bulksms.roycetechnologies.co.ke/api/delivery-report"
+    endpoint = "https://roycebulksms.com/api/delivery-report"
     data ={
     'message_id': message_id
     }
